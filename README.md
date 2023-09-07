@@ -1,2 +1,2 @@
 # Java-Standard-Edition
-![LOGO](/Array/java.jpg)
+<img src="Arrays/java.jpg"/>
