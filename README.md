@@ -1,2 +1,2 @@
 # Java-Standard-Edition
-<img src="Array/java.jpg"/>
+<img src="https://github.com/sandeep-patel13/java-standard-edition/java.jpg"/>
