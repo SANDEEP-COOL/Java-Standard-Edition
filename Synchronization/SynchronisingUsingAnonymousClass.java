@@ -1,5 +1,7 @@
 import java.io.*;
 
+import Oops.NotFollowingOOPS;
+
 class Test {
 
     synchronized void fun(int n) {
@@ -24,7 +26,7 @@ public class SynchronisingUsingAnonymousClass {
     public static void main(String[] args) {
         
          // only one object
-         final Test obj = new Test();
+         final NotFollowingOOPS obj = new NotFollowingOOPS();
  
          Thread a = new Thread() {
              public void run() { obj.fun(15); }

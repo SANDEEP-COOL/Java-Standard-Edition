@@ -1,0 +1,541 @@
+1. Collections Framework
+
+2. Java Collections Framework is broadly divided into 3 main Interfaces.
+    a - Collection 
+    b - Map
+    c - Iterator
+
+3. ArrayList class of Collections Framework - ArrayList class allows us to create resizable array , and it implements to List Interface.
+
+4. Java Collections Interface contains three sub Interfaces 
+    a - List
+    b - Set
+    c - Queue
+
+    a - List - 1. List Interface is an ordered collection.
+               2. List Interface allows us to add or remove ele like an array
+
+    b - Set - 1. Set Interface stores ele without any duplicacy.
+              2. It provides uniquness.
+
+    c - Queue - 1. Queue Interface provides FIFO manner.
+
+5. Collection interface has provided some methods which are implemented by different classes to provide functionality 
+   according to their nature.
+
+   a - add() - inserts ele.
+   b - size() - returns size.
+   c - remove() - removes ele.
+   d - iterator() - returns an iterator to iterato over any collection.
+   e - addAll() - adds two collections.
+   f - removeAll() - removes collection.
+   g - clear() - removes all ele.
+
+
+------------------------------------------------------LIST----------------------------------------------------------------------
+
+6. List Interface's details are given below...
+    a. List Interface is an ordered collection.
+    b. It extends Collection Interface.
+    c. List interface provides these methods , some of are inherited from Collection interface and some are new.
+       
+       1 - add() - inserts ele.
+       2 - addAll() - adds two List objects.
+       3 - get() - provides random accessing of ele.
+       4 - iterator() - prvodes Iterator object , sequentially accessing of ele.
+       5 - set() - updates ele at index.
+       6 - remove() - removes ele.
+       7 - removeAll() - removes all ele.
+       8 - clear() - removes all ele but more efficient than removeAll().
+       9 - size() - returns size of list.
+       10 - toArray() - converts list into an array.
+       11 - contains() - returns true if ele is presented in list.
+
+7. Differences between List and Set Interfaces.
+    Imp. - List and Set Interfaces both inherites to Collection interface , still some Differences exist there...
+    a - List interface store duplicate elements , but Set interface cannot have duplicate elements. 
+    b - Elements stored in list have a particular order, but in set they are stored in groups.
+
+
+--------------------------------------------------------------ArrayList-----------------------------------------------------------
+
+8. ArrayList class details are given below...
+    a - ArrayList class implements to List interface.
+    b - ArrayList class provides us a resizable array called dynamic array.
+
+    Diffrence between ArrayList and Array...
+    1 - while creating array we must specify the size of that array , but in arrayList we don't need to specify size.
+    2 - once size is declared its hard to change the size of array , but arraylist can increase its size easily.
+
+    Methods...
+    1 - add() - inserts ele.
+    2 - get() - returns ele.
+    3 - remove() - removes ele.
+    4 - size() - size.
+    5 - sort() - sorts ele.
+
+        Imp : For sorting an arraylist elements we need to use an Interface called Comparator and one method of these 2 methods,
+              these both methods are static.
+               a - naturalOrder() - sorts ele in ascending order.
+               b - reverseOrder() - sorts ele in descending order.
+            
+    6 - addAll() - copy all elements of an ArrayList into another ArrayList.
+    7 - clear() - removes all ele at once.
+    8 - clone() - returns a cloned arrayList (explicit type conversion is needed from Object to ArrayList).
+    9 - contains() - returns true if ele is presented.
+    10 - indexOf() - returns an index of passed ele.
+    11 - isEmoty() - return true if arraylist is empty.
+    12 - iterator() - return an object of Iterator.
+    13 - toArray() - copies all the elements of arraylist into array.
+    14 - toString() - returns String reperesentation of arraylist.
+
+        Imp : Convert array into arraylist. the only thing we need to do is that , pass Arrays.asList(arr) to constructor of 
+              ArrayList.
+              ex - ArrayList<Integer> al = new ArrayList<>(Arrays.asList(arr));
+
+-----------------------------------------------------------------MAP------------------------------------------------------------
+
+9. Map Interface details are given below.
+    1. Map Interface provides functionality of Map Data Structure.
+    2. Elements are stored in Key/Value pair.
+    3. Keys are unique.
+    4. We can access and modify values associated with keys.
+    5. Map Interface contains three different sets.
+       a - set of keys.
+       b - set of values.
+       c - key/value mapping.
+    6. Classes that implemet Map interface.
+       a - HashMap.
+       b - TreeMap.
+       c - EnumMap.
+       d - LinkedHashMap.
+       e - WaekHashMap.
+    7. Interface that extends Map Interface are 3.
+       a - SortedMap.
+       b - NavigableMap.
+       c - ConcurrentMap.
+    8. Some Methods of Map Interface.
+       a - put(K, V) - insert a mapping into map , if key already presented then it will replace old value by new value.
+       b - putAll() - insert all mapping of another map inside this map.
+       c - get(K) - returns value associated with this key, if there is not key it return null.
+       d - containsKey(K) - returns true if key is presented in map.
+       e - containsValue(K) - returns true if value is presented in map.
+       f - replace(K, V) - replaces old value by new value of specified key.
+       g - remove(K) - removes entry of this key.
+       h - keySet() - returns set of keys.
+       i - valueSet() - returns set of values.
+       j - entrySet() - returns set of key/value mapping.
+
+-----------------------------------------------------------------HashMAP--------------------------------------------------------
+
+10. HashMap class details are given below.
+       a - Provides functionality of Hash Table Data Structure.
+       b - It stores key/value mapping.
+       c - Implements Map interface.
+
+       Methods...
+       1 - clear() - removes all mapping from HashMap.
+       2 - clone() - returns cloned HashMap object(explicit type conversion is needed, from Object to HashMap).
+       3 - isEmpty() - retuns true is HashMap object is empty.
+       4 - put() - inserts key/value mapping in HashMap.
+                   if key is already presented then old value will be replaced by new value.
+       5 - putAll() - inserts all mapping of other HashMap into this HashMap.
+       6 - remove() - if we pass a single ele to remove() , then it will take it as a key and if that key is presented so 
+                      the mapping of that key will be removed.
+
+                      if we pass 2 arguments then it will take it as a mapping and if that mapping is presented so the whole 
+                      mapping will be removed.
+        7 - containsKey() - returns true if key is presented in HashMap.
+        8 - containsValue() - returns true if passed value is presented in HashMap.
+        9 - get() - returns value of passed key, if key is presented then it returns null.
+        10 - entrySet() - returns a view like set of all the entries in HashMap.
+                          we can also use this method in forEach loop.
+                          Map.Entry<K,V> is a nested interface of Map interface.
+        11 - keySet() - returns a set of all keys of HashMap.
+                        we can also use this method in forEach loop.
+        12 - values() - returns collection of all values in HashMap.
+
+
+------------------------------------------------------------LinkedHashMap------------------------------------------------------------
+
+11. LinkedHashMap details are given below.
+    a. LinkedHashMap is a class inherits to HashMap class.
+    b. LinkedHashMap provides LinkedList Implementation of Map Interface , also provides HashTable(mandatory for key/value pair)
+    c. It maintains Insertion Order Preserve.
+
+    Methods...
+    a - put() - inserts mapping.
+    b - putAll() - inserts all mapping of another LinkedHashMap into this LinkedHashMap.
+    c - entrySet() - returns set of all entries.
+    d - keySet() - returns set of all keys.
+    e - values() - return set of all values.
+    f - get() - retuns value of specified key.
+    g - remove() - removes entry of specified key.
+    h - clear() - removes all ele.
+    i - containsKey() - returns true if key is presented.
+    j - containsValue() - returns true if value is presented.
+    i - size() - returns size.
+    k - isEmpty() - if it is empty then returns true.
+
+    Imp - Difference between LinkedHashMap and HashMap.
+        1 - LinkedHashMap internally maintains Doubly Linked List that's why it manages insertion order preserve.
+        2 - LinkedHashMap needs more space this is because it maintains doubly linked list.
+        3 - LinkedHashMap performace is slower than HashMap.
+
+------------------------------------------------------------SortedMap------------------------------------------------------------
+
+
+12. SortedMap details are given below.
+    1 - SortedMap is an interface which provides functionality of sorting the keys stored in map.
+    2 - It extends to Map interface and Map extends to Collection interface.
+    3 - TreeMap implements SortedMap.
+    4 - If we want to use functionality of SortedMap then we must create an object of TreeMap class.
+
+    methods of SortedMap given below.
+
+    a - comparator() - returns a comparator in case of reverse order but null in case of natural order.
+    b - firstKey() - returns a very first key stored in map. 
+    c - lastKey() - returns a very last key stored in map.
+    there are some more methods but they are not that much important.
+
+------------------------------------------------------------NavigableMap------------------------------------------------------------
+
+13. NavigableMap details are given below.
+    1 - NavigableMap is an interface.
+    2 - NavigableMap interface provides the functionality of navigating among entries in map.
+    3 - It is considered type of SortedMap.
+
+    methods of this interface are not that much important , but if you need so just go on internet and check it out 
+
+------------------------------------------------------------TreeMap------------------------------------------------------------
+
+14. TreeMap details are given below.
+    1 - TreeMap is a class which provides functionality of Tree Data Structure.
+    2 - It implements to NavigableMap interface.
+    
+    TreeMap methods are listed below.
+    a - put() - inserts a key/value mapping in TreeMap.
+    b - putAll() - inserts all mapping of another map in this map.
+    c - entrySet() - retuns a set of all Map.Entry.
+    d - keySet() - returns a set of keys.
+    e - values() - returns a collection of values.
+    f - get() - returns value of specified key.
+    e - remove(key) - retuns a value of specified key and remove that entry from map.
+    g - firstKey() - retuns the first key in map.
+    h - firstEntry() - returns the mapping of very first key.
+    i - lastKey() - returns the last key in map.
+    j - lastEntry() - returns mapping of last key in map.
+    k - clone() - returns cloned TreeMap.(explicit type conversion from Object to TreeMap)
+    l - containsKey() - returns true if key exists in map.
+    m - containsValue() - return true if value exists in map.
+    n - size() = returns the size of TreeMap.
+    o - clear() - removes all the entries of the Tree Map.
+
+------------------------------------------------------------Set------------------------------------------------------------
+
+15. Set details are given below.
+    1 - The Set Interface provides the feature of mathematical set.
+    2 - Set interface extends to Collection interface.
+    3 - Unlike list set can not contain duplicate elements.
+    4 - There are multiple methods which implements to Set interface.
+    5 - There are 2 interface which extends to Set interface 
+        a - SortedSet interface 
+        b - NavigableSet interface 
+    
+    6 - methods of Set interface given below.
+        a - Since Set is child interface of Collection interface that's why it contains all methods of Colleciton interface. 
+        b - add() - adds element to set.
+        c - addAll() - adds all the elements of any collection(like Set , ArrayList etc) object to Set.
+        c - iterator() - returns an iterator object to iterate elements sequentially of any set.
+        d - remove() - removes all the elements of Set.
+        e - size() - returns the size of set.
+        f - toArray() - copies all the elements of Set in specified array.
+        g - contains() - returns true if element exists.
+        h - hashCode() - retuns a hashCode of an object.
+
+    7 - Important operations , that can be performed on set.
+        a - union - to get union of two sets we use addAll().
+        b - intersaction - to get intersaction of two sets we use retainAll().
+
+            retainAll() - update the calling set by all the common elements of two sets.
+        
+        c - subset - to check if a set is subset of another set or not containsAll() methods is used.
+        
+            containsAll() - returns true if X set contains all elements of Y set.
+
+------------------------------------------------------------HashSet---------------------------------------------------------------
+
+16 - why HashSet ? 
+    a - HashSet in java is used to access elements randomly. It is because it uses HashTable DS and hash code.
+    
+    Hash Code - hash code is a unique identity of an element.
+
+    b - HashSet can not contain duplicate elemets because each element has a unique hash code.
+    c - HashSet is not by default synchronized. Then it must be externally synchronized.
+    d - HashSet is a class implements to Set interface.
+
+------------------------------------------------------------LinkedHashSet---------------------------------------------------------------
+
+17 - LinkedHashSet
+    a - LinkedHashSet is a class which implements to Set interface.
+    b - It provides the functionality of Hash Table DS and Doubly Linked list DS.
+    c - It stores elements in Hash Table like HashSet.
+    d - DLL is used to make LinkedHashSet insertion order preserved.
+
+    LinkedHashSet vs HashSet...
+    
+    a - both implements to Set interface but still there are some key differences between them
+    b - LinkedHashSet requires more storage as it uses the Doubly LL internally.
+    c - LinkedHashSet's performance is less than HashSet because it maintains DLL.
+
+    LinkedHashSet vs TreeSet...
+    
+    a - LinkedHashSet maintains the insertion order preserve because it uese DLL ,
+        but Tree maintains the sorted element because it uses SortedSet interface.
+    b - TreeSet performance is slow than LinkedHashSet because it performs operations to sort the elements.
+    c - LinkedHashSet allows us to store null values , but tree set doesn' allow us to store null values.
+
+------------------------------------------------------------SortedSet---------------------------------------------------------------
+
+18 - SortedSet Interface details are given below.
+    a - SortedSet interface sorts the element in set.
+    b - It extends to Set interface.
+    c - TreeSet implements to SortedSet interface.
+    e - It contains all the methods of Set interface.
+    
+    methods of SortedSet interface are given below...
+
+    1 - comparator() - This method returns comparator that can be used to sort the elements.
+    2 - first() - returns very first element in set.
+    3 - last() - returns the very last element in set.
+
+    TreeSet vs HashSet.
+
+    However both the classes implements to Set interface but still there are some key differences between them.
+
+    a - HashSet doesn't maintain insertion order preserved as well as it doesn't sort the elememnts,
+        but TreeSet maintains the order of elements in set.
+    b - TreeSet class provides some methods like first() , and last() to provide easy navigation on elememnts
+        of Set. Because TreeSet class implements to NavigableSet interface as well.
+    c - HashSet is faster than TreeSet for basic operations like add , remove , contains , size.
+
+------------------------------------------------------------NavigableSet---------------------------------------------------------------
+
+19 - NavigableSet interface details are given below.
+    a - NavigableSet interface provides features to navigate among set elements.
+    b - It is considered as a type of sorted set because it inherites to sorted set.
+
+------------------------------------------------------------TreeSet---------------------------------------------------------------
+
+20 - TreeSet details are given below.
+    a - TreeSet is a class provides functionality of Tree Data Structure.
+    b - TreeSet class inherits to Navigable Set interface.
+
+------------------------------------------------------------Stack---------------------------------------------------------------
+
+21 - Stack details are given below.
+    1 - Stack is a class which provides functionality of Stack Data Structure.
+    2 - Stack class extends to Vector class.
+    3 - Collection (interface) <----- List (interface) <----- Vector (class) <----- Stack (class).
+
+    Methods of Stack class are given below.
+
+    a - push() - pushes element in the stack.
+    b - pop() - removes element from stack.
+    c - peek() - returns the top element in stack.
+    d - search() - returns the index of element in stack.
+    e - empty() - returns true if stack is empty.
+
+------------------------------------------------------------Queue---------------------------------------------------------------
+
+22 - Queue interface details are given below.
+    a - Queue interface provides functionality of Queue Data Structure.
+    b - It inherits to Collection interface.
+    
+    Methods of Queue interface.
+    Since Queue inherites to Collection that's why all the methods of Collection interface appears here.
+
+    offer() -  It inserts element in queue.
+    peek() - Returns the head element in queue.
+    poll() - removes the head of queue.
+
+------------------------------------------------------------PriorityQueue---------------------------------------------------------------
+
+23 - PriorityQueue details are given below.
+    a - PriorityQueue class provides the functionality of Heap Data Structure.
+    b - It implements to Queue interface.
+    c - Unlike normal queue PriorityQueue elements are retrieved in sorted order.
+    d - It is important to note that in PriorityQueue elements may not be sorted , however elements are always retrieved in 
+        sorted order.    
+    e - when you use peek() of PriorityQueue then you will get smallest element in that , irrespective of whether elements 
+        are sorted or unsorted in PriorityQueue.
+
+    Methods of PriorityQueue are given below.
+
+    1 - offer() - inserts ele in PriorityQueue.
+    2 - peek() - peek() return head element of queue.
+    3 - poll() - returns and remove the head of PriorityQueue.
+    4 - iterator() - returns an iterator to iterate PriorityQueue.
+    5 - size() - returns the size.
+    6 - toArray() - copies all the elements of pq into specified array.
+
+------------------------------------------------------------Deque---------------------------------------------------------------
+
+24 - Deque details are given below.
+    a - Deque is an interface provides the functionality of Double Ended Queue.
+    b - It extends to queue interface.
+    c - In normal queue we add element from rear and remove from front end, but in deque elements can add or removed from 
+        front and rear both the ends.
+    
+    Methods are given below.
+    Since it extends to Queue interface , it contains all the methods of Queue interface.
+
+    offerFirst() - inserts element using front end of deque.
+    offerLast() - inserts element using rear end of deque.
+    pollFirst() - removes and returns the element from font end.
+    pollLast() - remove and retuns the element from last end.
+
+    Important - It is recommended to use Deque as Stack because Stack is synchronized.
+
+------------------------------------------------------------LinkedList---------------------------------------------------------------
+
+25 - LinkedList class details are given below.
+    a - LinkedList class provides functionality of Doubly Linked List Data Structure.
+    b - LinkedList class implements to List , Deque and Queue Interfaces.
+
+    Methods of LinkedList class are given below.
+    1 - add() - inserts ele in DLL.
+    2 - add(index) - inserts ele at specified index in DLL.
+    3 - get(index) - returns ele at specified index.
+    4 - set(index) - updates an ele at specified index.
+    5 - contains() - returns true if element exists in DLL or not.
+    6 - indexOf() - returns first index of element.
+    7 - lastIndexOf() - returns the last index of ele.
+    8 - clear() - removes all elements from DLL.
+    9 - iterator() - returns an iterator.
+
+    Important - LinkedList class implements to Deque and Queue interafaces that's why it can use methods of 
+                both the interfaces.
+
+    Differences between LinkedList and ArrayList.
+    a - LinkedList implements to List, Deque and Queue interfaces but ArrayList only implements to List interface.
+    b - LL stores 3 values but AL stores only one value in a single position.
+    c - LL provides functionality of DLL and AL provides functionality of dynamic(resizable) array.
+    d - LL doesn't provide random access but AL provides random access of elements.
+
+------------------------------------------------------------ArrayDeque---------------------------------------------------------------
+
+26 - ArrayDeque details are given below.
+    a - ArrayDeque can be used to implement Queue and Deque interfaces both using array.
+    b - It implements Queue and Deque interfaces both.
+
+    Now all the methods of Queue and Dequeu interface can be used by ArrayDeque.
+
+    ArrayDeque vs LinkedList 
+
+    1 - LL requires more storage than ArrayDeque because LL stores address of prev and next node.
+    2 - If you wanna implement the Queue and Deque interfaces then ArrayDeque performance is faster than LL.
+    
+
+remaining - hashcode , some questions , comparator , comparable.
+
+
+------------------------------------------------------------HashCode and Equals-----------------------------------------------------------------------------
+
+27 - hashCode() and equals() details are given below.
+    a - hashCode() and equals() are defined in Object class which is parent class for all objects in java.
+
+    b - All java objects inherit the default Implementation of these methods.
+    
+    c - prototype : 
+        1 - hashCode() - public int hashCode().
+        2 - equals() - public boolean equals(Object obj).
+    
+    d - The equals() of the Object class , by default compares references(address) of two objects.
+
+    e - The hashCode() of the object class returns a unique code for each object.
+
+    f - Why equals Method.
+        let's say there is a class called Pen having color and price as attributes, and two objects of pen class are 
+        pen1 and pen2 which have same color and price, it means that as a real world entity the are same, but since the 
+        references of both the objects are different so if we call equals method then it will compare references and 
+        even pen1 and pen2 are same , we will get false , because equals() compares references.
+
+        to solve this issue we need to override equals() and there we will have to return true or false based on their 
+        attributes not references.
+        
+        ex - public boolean equals(Object obj) {
+
+            Pen that = (pen) obj;
+
+            boolean result = ( this.price == that.price && this.color.equals(that.color) ) ;
+
+            return result.
+
+        }
+
+        NOTE : this.color.equals(that.color) - this will invoke equals() of String class not of Object class.
+                                               String classes overrides equals() and compares objects based on 
+                                               attributes.
+
+    
+    g - Why hashCode()
+        simple...
+        let's assume previous situation where you have pen1 and pen2 whose attributes are exactly same right.
+
+        catch the problem...
+        let's say you wanna store them in hashSet , hashSet stores unique values , what you thing will there be two objects or only one in hashSet.
+
+        if you say two , then you are correct....
+        because two objects are unique or not is determined using hashCode(made by references) and when you store pen1 and pen2 then before storing them , 
+        their hashCodes will be compared by java and since their references are different that's why Object's class hashCode() will return different hashcodes 
+        for both of them.
+
+        we want...
+        now we want that if their properties are equal then they sould be treated same they will not be unique and when we store them in HashSet so only one object 
+        is stored there.
+
+        so for this we will have to override hashCode() in class Pen , which will return a hashCode made by attributes of objects.
+
+        so if attributes are same so the hashCode which will be created that will also be same and both are treated same object.
+
+        ex - public int hashCode() {
+
+            return price+color;
+
+        }
+
+--------------------------------------------------------contrat between equals and hashCode-----------------------------------------------------------------------------
+
+28 - if two object's are equal then their hashCode should be same.
+     but if two object's hashCodes are same then object may or may not be equal( because classes of both object can be different )
+
+
+--------------------------------------------------------Comparator and comparable-----------------------------------------------------------------------------
+
+29 - Comparator and comparable details are given below.
+
+    a - Comparator and Comparable both are interfaces.
+
+    b - Comparable interface defines the NATURAL order of sorting for every object of any class.
+
+    c - Comparable has a method called compareTo(T obj) ; 
+
+        1 - compareTo(T o)
+                1 - compareTo() compares current object and argument object with each other and return an int value (+ve , -ve , 0).
+
+                    ascending order - this.attribute - argument.attribute.
+                    descending order - argument.attribute - this.attribute.                   
+
+        2 - prototype : public int compareTo(T obj);
+
+    d - Comparator interface allows us to sort objects in multiple ways.
+
+    e - Comparator interface has method called compare() : 
+
+        1 - compare(T o1 , T o2) - This method takes two arguments and compares them and retuns an int value(+ve , -ve , 0).
+
+                    ascending order - o1.attribute - o2.attribute.
+                    descending order - o2.attribute - o1.attribute.               
+
+    

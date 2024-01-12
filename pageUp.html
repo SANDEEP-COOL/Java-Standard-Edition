@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&family=Urbanist:wght@100&display=swap" rel="stylesheet">
+    <style>
+        @media screen and (max-width: 800px) {
+            #container{
+                flex-direction: column !important;
+                height: 90vh !important;
+            }
+            #form{
+                margin-top: 2px !important;
+            }
+            #two{
+                margin-left: 0px !important;
+                height: 30vh !important;
+            }
+            #one{
+                height: 50% !important;
+            }
+        }
+
+    </style>
+</head>
+  <body class="d-flex justify-content-center align-items-center" style="width: 100vw; height: 100vh; background-repeat: no-repeat; background-size: cover; background-image: url(https://cdn.pixabay.com/photo/2018/02/11/22/22/paper-3146953_640.jpg);">
+
+    <div id="container" class="d-flex flex-row justify-content-center align-items-center" style="letter-spacing: 2px; font-family: 'Quicksand', sans-serif;width: 70%; height: 70%; background-color: white; border-radius: 5px;">
+
+        <div id="one" style="width: 40%; height: 80%;">
+
+            <h5 style="text-align: center;">Please enter your details...</h5>
+
+            <form accept="" class="d-flex flex-column mt-5" id="form">
+                <label for="name" class="text-primary">Username</label>
+                <input id="name" type="text" style="margin-bottom: 30px;"/>
+                <label class="text-primary" for="name">Password</label>
+                <input id="name" type="text"/>
+                <small style="margin-bottom: 30px;">Forgot Password...</small>
+                <button type="button" class="btn btn-primary">Login</button>
+            </form>
+
+        </div>
+
+        <div id="two" style="border-radius: 5px; margin-left: 80px;  width: 40%; height: 80%; background-repeat: no-repeat; background-size: cover; background-image: url('https://imgs.search.brave.com/70b8tjUjyt_0Q19MZOQVXoA3ppffGFmeexeVBmU6L84/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOC8w/OC8xNC8xMy8yMy9v/Y2Vhbi0zNjA1NTQ3/XzY0MC5qcGc');">
+            
+
+        </div>
+
+    </div>
+        
+  </body>
+</html>
