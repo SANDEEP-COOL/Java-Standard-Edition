@@ -1,10 +1,14 @@
 import java.util.*;
-
-class Movie implements Comparable<Movie>{
+class Movie implements Comparable<Movie>
+{
 
     private double ratings;
     private String name;
     private int year;
+
+    public double getRatings(){
+        return ratings;
+    }
 
     @Override
     public String toString() {
@@ -24,6 +28,20 @@ class Movie implements Comparable<Movie>{
 
 }
 
+class RatingsComparator implements Comparator<Movie>{
+    @Override 
+    public int compare(Movie m1 , Movie m2) {
+        double m1Rating = m1.getRatings();
+        double m2Rating = m2.getRatings();
+        if(m1Rating == m2Rating)
+            return 0;
+        else if(m1Rating < m2Rating)    
+            return -1;
+        else 
+            return 1;
+    }
+}
+
 public class ComparableDemo1{
 
     public static void main(String[] args) {
@@ -38,7 +56,7 @@ public class ComparableDemo1{
         for(Movie m : list)
             System.out.println(m);
 
-        Collections.sort(list);
+        Collections.sort(list , new RatingsComparator());
 
         System.out.println("Movies after sorting...");
         for(Movie m : list)
